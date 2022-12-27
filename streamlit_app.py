@@ -1,2 +1,2 @@
 import streamlit
-streamlit.little('test practince github')
+streamlit.title('test practince github')
