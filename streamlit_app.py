@@ -18,7 +18,7 @@ streamlit.write('The user entered ', fruit_choice)
 # fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 # streamlit.text(fruityvice_response)
-# streamlit.header("Fruityvice Fruit Advice!")
+streamlit.header("Fruityvice Fruit Advice!")
 # streamlit.text(fruityvice_response.json())
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
