@@ -55,3 +55,4 @@ except URLError as e:
     streamlit.error()
 # streamlit.write('The user entered ', first_choice)
 # my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
+
