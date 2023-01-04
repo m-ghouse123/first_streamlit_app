@@ -45,7 +45,7 @@ streamlit.header("The fruit list contain:")
 streamlit.dataframe(my_data_row)
 try:
     fruit_choice = streamlit.text_input('What fruit would you like information about?') 
-if fruit_choice is none:
+if len(fruit_choice)=0:
     streamlit.error('please select a fruit to get information.')
 else:
     fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
