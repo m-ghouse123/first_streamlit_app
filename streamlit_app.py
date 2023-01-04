@@ -22,7 +22,7 @@ streamlit.header("Fruityvice Fruit Advice!")
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
-# streamlit.write('The user entered ', fruit_choice)
+streamlit.write('The user entered ', fruit_choice)
 streamlit.dataframe(fruityvice_normalized)
 my_fruit_list = pandas.read_csv("https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt")
 # streamlit.dataframe(my_fruit_list)
