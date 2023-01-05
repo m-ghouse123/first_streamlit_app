@@ -63,3 +63,12 @@ else:
 # streamlit.write('The user entered ', first_choice)
 # my_cur.execute("insert into pc_rivery_db.public.fruit_load_list values ('from streamlit')")
 
+def get_fruit_data_list():
+    with my_cnx_cursor() as my_cur:
+        my_cur.execute("SELECT * from pc_rivery_db.public.fruit_load_list")
+        return my_cur.fetchall()
+# add button to load fruit list
+if streamlit.button('Get Fruit Load List'):
+    my_cnx_cursor = snowflake.connector.connect(**streamlit.secrets["snowflake"])
+    my_data_row=get_fruit_data_list();
+    streamlit.dataframe(my_data_row)
