@@ -83,7 +83,7 @@ if streamlit.button('Add a Fruit to the List'):
     my_cnx_new = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     back_from_function_new = add_new_fruit_list(add_fruitnew);
     streamlit.text(back_from_function_new)
-def get_fruit_data_list_db():
+def get_fruit_list_db():
     with my_cnx_new.cursor() as my_cur:
         my_cur.execute("SELECT * from pc_rivery_db.public.fruit_load_list")
         return my_cur_new.fetchall()    
