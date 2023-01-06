@@ -91,4 +91,4 @@ if streamlit.button('Get Fruit List'):
     my_cnx_new = snowflake.connector.connect(**streamlit.secrets["snowflake"])
     get_data_rows = get_fruit_list_db()
     my_cur_new.close()
-    stremlit.dataframe(get_data_rows)
+    streamlit.dataframe(get_data_rows)
